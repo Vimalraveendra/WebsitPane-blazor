@@ -55,13 +55,6 @@ using Microsoft.AspNetCore.Components.Web;
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 8 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/_Imports.razor"
 using WebsitePane;
 
@@ -75,6 +68,13 @@ using WebsitePane.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -83,6 +83,21 @@ using WebsitePane.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 50 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
+ 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("loadUser","Text after render");
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JSRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

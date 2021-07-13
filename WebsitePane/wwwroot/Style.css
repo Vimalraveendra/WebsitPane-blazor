@@ -17,6 +17,9 @@ body {
     min-width: 100vh;
 }
 
+.main-section{
+    display:flex;
+}
 
 .navbar {
     
@@ -43,6 +46,7 @@ body {
     margin: 0 2px;
     background-color: antiquewhite;
     overflow: hidden;
+    width:90%;
 }
 
 /* left-pane */
@@ -123,6 +127,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.side-section{
+    background-color:red;   
+    width:10%;
+}
+.side-section{
+    background-color:aqua;
 }
 
 /* media queries on small screens */

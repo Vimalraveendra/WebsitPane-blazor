@@ -1,35 +1,58 @@
 ﻿@page "/"
+
+@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
     <!-- nav heading section -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed">
 
-    </nav>
+</nav>
 
-    <!-- body section -->
-    <main>
-        <section class="main-container">
-            <div class="patient-container">
+<!-- body section -->
+<main class="main-section">
+    <section class="main-container">
+        <div class="patient-container">
 
-                <div class="letter-bar">
-                    
+            
 
-                </div>
+            <div class="list-container">
+                <ul class="patient-list">
+                </ul>
+            </div>
 
-                <div class="list-container">
-                    <ul class="patient-list">
-                    </ul>
-                </div>
+        </div>
+
+        <div class="split-bar">&nbsp;</div>
+
+        <div class="card-container">
+            <div class="patient-card">
 
             </div>
 
-            <div class="split-bar">&nbsp;</div>
-
-            <div class="card-container">
-                <div class="patient-card">
-                    
-                </div>
-
-            </div>
+        </div>
 
 
-        </section>
-    </main>
+    </section>
+    <section class="side-section">
+        <ul class="side-list">
+            <li><a>Hello</a></li>
+            <li><a>How</a></li>
+            <li><a>Here</a></li>
+        </ul>
+        <ul class="side-list">
+            <li><a>Hello</a></li>
+            <li><a>How</a></li>
+            <li><a>Here</a></li>
+        </ul>
+    </section>
+</main>
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("loadUser","Text after render");
+        }
+    }
+}
