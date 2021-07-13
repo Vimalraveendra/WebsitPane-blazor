@@ -1,0 +1,158 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+    *:focus {
+        outline: none;
+    }
+
+input:focus, select:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100vh;
+}
+
+
+.navbar {
+    
+    padding: 1.2rem !important ;
+}
+    ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.done {
+    display: block;
+}
+
+/* body section */
+
+/* main-container */
+.main-container {
+    display: flex;
+    border: 1px black solid;
+    margin: 0 2px;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+/* left-pane */
+.patient-container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 15%;
+    background-color: aqua;
+    display: flex;
+    width: 180px;
+}
+
+/* right-pane */
+.card-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: aquamarine;
+}
+
+/* separator */
+.split-bar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #b1afaf;
+    width: 0.8rem;
+    cursor: col-resize;
+    margin: 0 0 0 auto;
+}
+
+/* alphabets list */
+
+.letter-bar {
+    background-color: black;
+}
+
+
+
+/* patient card container */
+.list-container {
+    width: 97%;
+}
+
+.patient-list {
+    width: 95%;
+    height: 450px;
+    /* overflow: auto; */
+}
+
+    /* patient list */
+    .patient-list li {
+        /* border: 1px solid black; */
+        padding: 0 10px;
+        /* background-color: #eee; */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+        .patient-list li :hover {
+            overflow: visible;
+            background-color: aqua;
+        }
+        /* Style the active class, and buttons on mouse-over */
+        .active, .patient-list li:hover {
+            background-color: #666;
+            color: white;
+        }
+
+/* patient card */
+.patient-card {
+    width: 500px;
+    height: 350px;
+    background-color: #eee;
+    box-shadow: 4px 5px 3px grey;
+    margin: 3rem 0 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* media queries on small screens */
+@media only screen and (max-width: 690px) {
+    .patient-card {
+        width: 80%;
+    }
+}
+    @media only screen and (max-width: 576px) {
+        .main-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-container {
+            width: 100%;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .patient-card {
+            width: 70%;
+            margin: 2rem 0 1rem 1rem;
+        }
+
+        .split-bar {
+            margin: 0 0 0 0;
+        }
+    }
