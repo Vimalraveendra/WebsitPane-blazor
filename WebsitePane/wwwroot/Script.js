@@ -18,7 +18,7 @@ function loadUsers() {
     const patientCardEl = document.querySelector('.patient-card')
 
 
-
+    var date = new Date().toLocaleDateString()
 
 
 
@@ -296,7 +296,7 @@ function loadUsers() {
         if (isMdn === 1) {
             // patientContainerEl.style.flexBasis = event.clientX+ "px"
             // patientContainerEl.style.width = event.clientX+ "px"
-            patientContainerEl.style.flexBasis = `${event.clientX-170}px`
+            patientContainerEl.style.flexBasis = `${event.clientX-190}px`
          
         } else {
             end()
