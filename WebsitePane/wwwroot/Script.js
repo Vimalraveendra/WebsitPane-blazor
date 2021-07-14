@@ -16,12 +16,45 @@ function loadUsers() {
     const patientContainerEl = document.querySelector('.patient-container')
     const cardContainerEl = document.querySelector('.card-container')
     const patientCardEl = document.querySelector('.patient-card')
+    
+   
+    const imagePreviewContainerEl = document.getElementById('image-preview')
+   
+    const sideListBtnEl = document.querySelector('.side-btn')
+    const inputGetFileEl = document.getElementById('getFile')
+    const imageContainerEl = document.querySelector('.img-container')
+    const previewImageEl = imageContainerEl.querySelector('.preview-image')
+    const imageDateEl = document.getElementById('img-date')
 
 
 
 
+    sideListBtnEl.addEventListener('click', function () {
+        inputGetFileEl.click();
+    })
+    inputGetFileEl.addEventListener('change', function () {
+        //selecting first file in the array
+        const file = this.files[0];
+        console.log('file', file)
+        //if we seletected the file, we need to create a new file reader as data url
+        if (file) {
+            const reader = new FileReader();
+            previewImageEl.style.display = 'block'
 
+            reader.addEventListener('load', function () {
+                imagePreviewContainerEl.style.display="block"
+                //this.result is the default propery of reader that contains the data url
+                previewImageEl.setAttribute('src', this.result)
+                imageDateEl.innerHTML = new Date().toLocaleDateString()
+            })
+            reader.readAsDataURL(file)
+        } else {
+            imagePreviewContainerEl.style.display = null;
+            previewImageEl.style.display = null;
 
+            previewImageEl.setAttribute('src',"")
+        }
+    })
 
     const usersData = [
         {
@@ -296,7 +329,7 @@ function loadUsers() {
         if (isMdn === 1) {
             // patientContainerEl.style.flexBasis = event.clientX+ "px"
             // patientContainerEl.style.width = event.clientX+ "px"
-            patientContainerEl.style.flexBasis = `${event.clientX-170}px`
+            patientContainerEl.style.flexBasis = `${event.clientX-190}px`
          
         } else {
             end()
