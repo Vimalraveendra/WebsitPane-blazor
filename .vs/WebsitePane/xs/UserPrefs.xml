@@ -1,24 +1,27 @@
 ﻿<Properties StartupConfiguration="{ECB8488E-ED32-46CC-B5D7-C3D47AF00383}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/Pages/Index.razor">
     <Files>
       <File FileName="WebsitePane/Shared/MainLayout.razor" Line="15" Column="11" />
-      <File FileName="WebsitePane/Pages/Index.razor" Line="39" Column="19" />
+      <File FileName="WebsitePane/Pages/Index.razor" Line="29" Column="1" />
       <File FileName="WebsitePane/Pages/_Host.cshtml" />
-      <File FileName="WebsitePane/wwwroot/Style.css" Line="164" Column="27" />
+      <File FileName="WebsitePane/wwwroot/Style.css" />
       <File FileName="WebsitePane/wwwroot/css/site.css" />
       <File FileName="WebsitePane/wwwroot/Script.js" />
       <File FileName="WebsitePane/Shared/NavMenu.razor" />
-      <File FileName="WebsitePane/Program.cs" Line="18" Column="1" />
+      <File FileName="WebsitePane/Program.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebsitePane" expanded="True">
             <Node name="WebsitePane" expanded="True">
-              <Node name="Pages" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Index.razor" selected="True" />
+              </Node>
               <Node name="Shared" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>

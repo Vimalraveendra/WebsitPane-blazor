@@ -45,7 +45,8 @@ function loadUsers() {
                 imagePreviewContainerEl.style.display="block"
                 //this.result is the default propery of reader that contains the data url
                 previewImageEl.setAttribute('src', this.result)
-                imageDateEl.innerHTML = new Date().toLocaleDateString()
+                    imageDateEl.innerHTML = new Date().toLocaleDateString().replace(/[/]+/gi, "-")
+       
             })
             reader.readAsDataURL(file)
         } else {
