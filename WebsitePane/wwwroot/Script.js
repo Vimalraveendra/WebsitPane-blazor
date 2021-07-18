@@ -62,7 +62,7 @@ function loadUsers() {
         var file = new Blob([text], { type: type });
         a.href = URL.createObjectURL(file);
         a.download = name;
-    }
+    }   
 
     const usersData = [
         {
@@ -201,7 +201,7 @@ function loadUsers() {
     ]
 
 
-
+   
 
 
     // creating patient card based on the event
@@ -238,7 +238,10 @@ function loadUsers() {
     function renderPatients() {
         //   clearing the parent container before adding
         patientListEl.innerHTML = "";
-        usersData.forEach(user => createPatients(user))
+        let result = DotNet.invokeMethodAsync("WebsitePane", 'GetPatientsList')
+
+        result.then(data => data.forEach(user => createPatients(user)))
+        //usersData.forEach(user => createPatients(user))
         let patientListItemEl = document.querySelectorAll('.patient-list li')
         // Loop through the patientListItemEl and add the active class to the current/clicked button
         for (var i = 0; i < patientListItemEl.length; i++) {

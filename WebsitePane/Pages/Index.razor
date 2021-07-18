@@ -12,7 +12,7 @@
     <section class="main-container">
         <div class="patient-container">
 
-            
+
 
             <div class="list-container">
                 <ul class="patient-list">
@@ -35,7 +35,7 @@
                         <img src="" alt="image-preview" class="preview-image" />
                     </div>
 
-                </div>   
+                </div>
             </div>
 
         </div>
@@ -62,12 +62,67 @@
 </main>
 
 @code
+
 {
+    public class Patient
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+    }
+    public static List<Patient> patientList = new List<Patient>(){
+                new Patient {Id= 10001,Name= "Abraham"},
+                    new Patient {Id=10002,Name= "Adam"},
+                   new Patient {Id= 10003,Name= "Antony AdamGonslavas"},
+                       new Patient {Id=  10004,Name=  "Bobby"},
+                           new Patient {Id= 10005,Name= "Boss AntonyMarshell"},
+                               new Patient {Id= 10006,Name=  "Bencher"},
+                               new Patient {Id=10007,Name="Christopher Gonsalves"},
+                                   new Patient {Id= 10008,Name="Calvin"},
+                                       new Patient {Id= 10009,Name= "Christy Christopher"},
+                                       new Patient {Id=  10010,Name=   "Don"},
+                           new Patient {Id=  10011,Name="Danny ImmanuelBidenSalves"},
+                               new Patient {Id= 10012,Name=  "Denver"},
+                               new Patient {Id=10013,Name= "Eagle"},
+                                   new Patient {Id= 10014,Name= "Entity"},
+                                       new Patient {Id= 10015,Name="Elgar"},
+                                       new Patient {Id= 10016,Name="Fedric"},
+                               new Patient {Id=  10017,Name=   "Fernandes"},
+                               new Patient {Id=10018,Name=  "Felix"},
+                                   new Patient {Id= 10019,Name=  "Gangster"},
+                                       new Patient {Id= 10020,Name="Gambler"},
+                                       new Patient {Id=  10021,Name="Guardian"},
+                               new Patient {Id= 10022,Name= "Harry"},
+                               new Patient {Id=10023,Name="Hamilton" },
+                                   new Patient {Id= 10024,Name= "Helen"},
+                                       new Patient {Id= 10025,Name="Immanuel"},
+                                       new Patient {Id= 10026,Name="Inker"},
+                               new Patient {Id=  10027,Name=   "Ivan"},
+                               new Patient {Id=10028,Name=  "Jennifer"},
+                                   new Patient {Id= 10029,Name=  "James"},
+                                       new Patient {Id= 10030,Name= "John"},
+                                       new Patient {Id=  10031,Name=   "Kevin"},
+                               new Patient {Id=10032,Name=   "Karl"},
+                                   new Patient {Id= 10033,Name= "Kristopher" },
+                                       new Patient {Id= 10034,Name= "Lenin"},
+
+
+        };
+
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
+
     {
         if (firstRender)
         {
             await JSRuntime.InvokeVoidAsync("loadUser","Text after render");
         }
+    }
+
+    [JSInvokable]
+    public static Task<List<Patient>> GetPatientsList()
+    {
+        
+        return Task.FromResult(patientList);
     }
 }
