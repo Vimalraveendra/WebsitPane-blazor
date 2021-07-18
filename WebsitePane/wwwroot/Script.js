@@ -64,141 +64,141 @@ function loadUsers() {
         a.download = name;
     }   
 
-    const usersData = [
-        {
-            "id": 10001,
-            "name": "Abraham"
-        }, {
-            "id": 10002,
-            "name": "Adam"
-        }, {
-            "id": 10003,
-            "name": "Antony AdamGonslavas"
-        },
-        {
-            "id": 10004,
-            "name": "Bobby"
-        },
-        {
-            "id": 10005,
-            "name": "Boss AntonyMarshell"
-        },
-        {
-            "id": 10006,
-            "name": "Bencher"
-        },
-        {
-            "id": 10007,
-            "name": "Christopher Gonsalves"
-        },
-        {
-            "id": 10008,
-            "name": "Calvin"
-        },
-        {
-            "id": 10009,
-            "name": "Christy Christopher"
-        },
-        {
-            "id": 10010,
-            "name": "Don"
-        },
-        {
-            "id": 10011,
-            "name": "Danny ImmanuelBidenSalves"
-        },
-        {
-            "id": 10012,
-            "name": "Denver"
-        },
-        {
-            "id": 10013,
-            "name": "Eagle"
-        },
-        {
-            "id": 10014,
-            "name": "Entity"
-        },
-        {
-            "id": 10015,
-            "name": "Elgar"
-        },
-        {
-            "id": 10016,
-            "name": "Fedric"
-        },
-        {
-            "id": 10017,
-            "name": "Fernandes"
-        },
-        {
-            "id": 10018,
-            "name": "Felix"
-        }, {
-            "id": 10019,
-            "name": "Gangster"
-        },
-        {
-            "id": 10020,
-            "name": "Gambler"
-        },
-        {
-            "id": 10021,
-            "name": "Guardian"
-        }, {
-            "id": 10022,
-            "name": "Harry"
-        },
-        {
-            "id": 10023,
-            "name": "Hamilton"
-        },
-        {
-            "id": 10024,
-            "name": "Helen"
-        },
-        {
-            "id": 10025,
-            "name": "Immanuel"
-        }, {
-            "id": 10026,
-            "name": "Inker"
-        },
-        {
-            "id": 10027,
-            "name": "Ivan"
-        },
-        {
-            "id": 10028,
-            "name": "Jennifer"
-        }, {
-            "id": 10029,
-            "name": "James"
-        },
-        {
-            "id": 10030,
-            "name": "John"
-        },
-        {
-            "id": 10031,
-            "name": "Kevin"
-        }, {
-            "id": 10032,
-            "name": "Karl"
-        },
-        {
-            "id": 10033,
-            "name": "Kristopher"
-        },
-        {
-            "id": 10034,
-            "name": "Lenin"
-        }
+    //const usersData = [
+    //    {
+    //        "id": 10001,
+    //        "name": "Abraham"
+    //    }, {
+    //        "id": 10002,    
+    //        "name": "Adam"
+    //    }, {
+    //        "id": 10003,
+    //        "name": "Antony AdamGonslavas"
+    //    },
+    //    {
+    //        "id": 10004,
+    //        "name": "Bobby"
+    //    },
+    //    {
+    //        "id": 10005,
+    //        "name": "Boss AntonyMarshell"
+    //    },
+    //    {
+    //        "id": 10006,
+    //        "name": "Bencher"
+    //    },
+    //    {
+    //        "id": 10007,
+    //        "name": "Christopher Gonsalves"
+    //    },
+    //    {
+    //        "id": 10008,
+    //        "name": "Calvin"
+    //    },
+    //    {
+    //        "id": 10009,
+    //        "name": "Christy Christopher"
+    //    },
+    //    {
+    //        "id": 10010,
+    //        "name": "Don"
+    //    },
+    //    {
+    //        "id": 10011,
+    //        "name": "Danny ImmanuelBidenSalves"
+    //    },
+    //    {
+    //        "id": 10012,
+    //        "name": "Denver"
+    //    },
+    //    {
+    //        "id": 10013,
+    //        "name": "Eagle"
+    //    },
+    //    {
+    //        "id": 10014,
+    //        "name": "Entity"
+    //    },
+    //    {
+    //        "id": 10015,
+    //        "name": "Elgar"
+    //    },
+    //    {
+    //        "id": 10016,
+    //        "name": "Fedric"
+    //    },
+    //    {
+    //        "id": 10017,
+    //        "name": "Fernandes"
+    //    },
+    //    {
+    //        "id": 10018,
+    //        "name": "Felix"
+    //    }, {
+    //        "id": 10019,
+    //        "name": "Gangster"
+    //    },
+    //    {
+    //        "id": 10020,
+    //        "name": "Gambler"
+    //    },
+    //    {
+    //        "id": 10021,
+    //        "name": "Guardian"
+    //    }, {
+    //        "id": 10022,
+    //        "name": "Harry"
+    //    },
+    //    {
+    //        "id": 10023,
+    //        "name": "Hamilton"
+    //    },
+    //    {
+    //        "id": 10024,
+    //        "name": "Helen"
+    //    },
+    //    {
+    //        "id": 10025,
+    //        "name": "Immanuel"
+    //    }, {
+    //        "id": 10026,
+    //        "name": "Inker"
+    //    },
+    //    {
+    //        "id": 10027,
+    //        "name": "Ivan"
+    //    },
+    //    {
+    //        "id": 10028,
+    //        "name": "Jennifer"
+    //    }, {
+    //        "id": 10029,
+    //        "name": "James"
+    //    },
+    //    {
+    //        "id": 10030,
+    //        "name": "John"
+    //    },
+    //    {
+    //        "id": 10031,
+    //        "name": "Kevin"
+    //    }, {
+    //        "id": 10032,
+    //        "name": "Karl"
+    //    },
+    //    {
+    //        "id": 10033,
+    //        "name": "Kristopher"
+    //    },
+    //    {
+    //        "id": 10034,
+    //        "name": "Lenin"
+    //    }
 
 
 
 
-    ]
+    //]
 
 
    
@@ -238,26 +238,32 @@ function loadUsers() {
     function renderPatients() {
         //   clearing the parent container before adding
         patientListEl.innerHTML = "";
+        //usersData.forEach(user => createPatients(user))
         let result = DotNet.invokeMethodAsync("WebsitePane", 'GetPatientsList')
 
-        result.then(data => data.forEach(user => createPatients(user)))
-        //usersData.forEach(user => createPatients(user))
-        let patientListItemEl = document.querySelectorAll('.patient-list li')
-        // Loop through the patientListItemEl and add the active class to the current/clicked button
-        for (var i = 0; i < patientListItemEl.length; i++) {
-            patientListItemEl[i].addEventListener("click", function () {
-                let current = document.getElementsByClassName("active");
+        result.then(data => data.forEach(user => {
+
+            createPatients(user)
+
+            let patientListItemEl = document.querySelectorAll('.patient-list li')
+            // Loop through the patientListItemEl and add the active class to the current/clicked button
+            for (var i = 0; i < patientListItemEl.length; i++) {
+                patientListItemEl[i].addEventListener("click", function () {
+                    let current = document.getElementsByClassName("active");
 
 
-                // If there's no active class
-                if (current.length > 0) {
-                    current[0].className = current[0].className.replace(" active", "");
-                }
+                    // If there's no active class
+                    if (current.length > 0) {
+                        current[0].className = current[0].className.replace(" active", "");
+                    }
 
-                // Add the active class to the current/clicked button
-                this.className += " active";
-            });
-        }
+                    // Add the active class to the current/clicked button
+                    this.className += " active";
+                });
+            }
+        }))
+       
+      
     }
 
     // invoking renderPatients function when the page loads
