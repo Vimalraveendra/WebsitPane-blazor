@@ -25,17 +25,53 @@
 
         <div class="card-container">
             <div class="patient-card">
-                <div class="image-preview" id="image-preview">
+                <div class="image-container-section">
+                    @*<div class="image-preview" id="image-preview">
 
-                    <div class="date-container">
-                        <p id="img-date">HelloS </p>
-                        <span><i class="fas fa-caret-down"></i></span>
-                    </div>
-                    <div class="img-container">
-                        <img src="" alt="image-preview" class="preview-image" />
-                    </div>
+                        <div class="date-container">
+                            <p id="img-date">HelloS </p>
+                            <span><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        <div class="img-container">
+                            <img src="" alt="image-preview" class="preview-image" />
+                        </div>
 
+                    </div>
+                    <div class="image-preview" id="image-preview">
+
+                        <div class="date-container">
+                            <p id="img-date">HelloS </p>
+                            <span><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        <div class="img-container">
+                            <img src="" alt="image-preview" class="preview-image" />
+                        </div>
+
+                    </div>
+                    <div class="image-preview" id="image-preview">
+
+                        <div class="date-container">
+                            <p id="img-date">HelloS </p>
+                            <span><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        <div class="img-container">
+                            <img src="" alt="image-preview" class="preview-image" />
+                        </div>
+
+                    </div>
+                    <div class="image-preview" id="image-preview">
+
+                        <div class="date-container">
+                            <p id="img-date">HelloS </p>
+                            <span><i class="fas fa-caret-down"></i></span>
+                        </div>
+                        <div class="img-container">
+                            <img src="" alt="image-preview" class="preview-image" />
+                        </div>
+
+                    </div>*@
                 </div>
+               
             </div>
 
         </div>
@@ -54,7 +90,10 @@
         <ul class="side-list">
             <li><a>Hello</a></li>
             <li><a>How</a></li>
-            <li><a>Here</a></li>
+            <li>
+                <button class="side-btn2">OpenMutiple</button>
+                <input type='file' id="getFiles" multiple style="display:none">
+            </li>
         </ul>
         <a href="" id="a">click here to download your file</a>
         <button onclick="download('file text', 'myfilename.txt', 'text/plain')">Create file</button>
