@@ -18,44 +18,114 @@ function loadUsers() {
     const patientCardEl = document.querySelector('.patient-card')
     
    
-    const imagePreviewContainerEl = document.getElementById('image-preview')
+    //const imagePreviewContainerEl = document.getElementById('image-preview');
    
     const sideListBtnEl = document.querySelector('.side-btn')
     const inputGetFileEl = document.getElementById('getFile')
-    const imageContainerEl = document.querySelector('.img-container')
-    const previewImageEl = imageContainerEl.querySelector('.preview-image')
-    const imageDateEl = document.getElementById('img-date')
+    //const imageContainerEl = document.querySelector('.img-container')
+    //const previewImageEl = imageContainerEl.querySelector('.preview-image')
+    //const imageDateEl = document.getElementById('img-date')
+
+    const sideListBtn2El = document.querySelector('.side-btn2')
+    const inputGetFilesEl = document.getElementById('getFiles')
+    const imageContainerSectionEl = document.querySelector('.image-container-section')
+   
 
 
+    //sideListBtnEl.addEventListener('click', function () {
+    //    inputGetFileEl.click();
+    //})
+    //inputGetFileEl.addEventListener('change', function () {
+    //    //selecting first file in the array
 
+    //    const file = this.files[0];
+    
+    //    //if we seletected the file, we need to create a new file reader as data url
+    //    if (file) {
+    //        const reader = new FileReader();
+    //        previewImageEl.style.display = 'block'
 
-    sideListBtnEl.addEventListener('click', function () {
-        inputGetFileEl.click();
-    })
-    inputGetFileEl.addEventListener('change', function () {
-        //selecting first file in the array
-        const file = this.files[0];
-        console.log('file', file)
-        //if we seletected the file, we need to create a new file reader as data url
-        if (file) {
-            const reader = new FileReader();
-            previewImageEl.style.display = 'block'
-
-            reader.addEventListener('load', function () {
-                imagePreviewContainerEl.style.display="block"
-                //this.result is the default propery of reader that contains the data url
-                previewImageEl.setAttribute('src', this.result)
-                    imageDateEl.innerHTML = new Date().toLocaleDateString().replace(/[/]+/gi, "-")
+    //        reader.addEventListener('load', function () {
+    //            imagePreviewContainerEl.style.display="block"
+    //            //this.result is the default propery of reader that contains the data url
+    //            previewImageEl.setAttribute('src', this.result)
+    //                imageDateEl.innerHTML = new Date().toLocaleDateString().replace(/[/]+/gi, "-")
        
+    //        })
+    //        reader.readAsDataURL(file)
+    //    } else {
+    //        imagePreviewContainerEl.style.display = null;
+    //        previewImageEl.style.display = null;
+
+    //        previewImageEl.setAttribute('src',"")
+    //    }
+    //})
+
+
+    function createImageContainer(file) {
+        console.log("iiidi",file)
+        imageContainerSectionEl.innerHTML = '';
+        imageContainerSectionEl.innerHTML = `
+        <div class="image-preview" id="image-preview">
+
+            <div class="date-container">
+                <p id="img-date">HelloS </p>
+                <span><i class="fas fa-caret-down"></i></span>
+            </div>
+            <div class="img-container">
+                <img src="" alt="image-preview" class="preview-image" />
+            </div>
+
+        </div>
+`
+
+       
+
+    }
+
+    const arrayList = [];
+
+    sideListBtn2El.addEventListener('click', function () {
+        inputGetFilesEl.click();
+    })
+    inputGetFilesEl.addEventListener('change', function () {
+        //selecting first file in the array
+
+        arrayList.push(this.files)
+        console.log('filess', arrayList)
+        //if we seletected the file, we need to create a new file reader as data url
+        if (arrayList.length > 0) {
+            arrayList.forEach((file,index) => {
+                const reader = new FileReader();
+                //previewImageEl.style.display = 'block'
+                createImageContainer(file)
+                   const imageContainerEl = document.querySelector('.img-container')
+                  const previewImageEl = imageContainerEl.querySelector('.preview-image')
+                   const imageDateEl = document.getElementById('img-date')
+                reader.addEventListener('load', function () {
+                    //imagePreviewContainerEl.style.display = "block"
+                    //this.result is the default propery of reader that contains the data url
+                    previewImageEl.setAttribute('src', this.result)
+                    console.log("thisoao",this.result)
+                    imageDateEl.innerHTML = new Date().toLocaleDateString().replace(/[/]+/gi, "-")
+
+                })
+                console.log('filesss', file)
+                console.log('index', index)
+                reader.readAsDataURL(file[index])
             })
-            reader.readAsDataURL(file)
+        
+      
+       
+           
         } else {
             imagePreviewContainerEl.style.display = null;
             previewImageEl.style.display = null;
 
-            previewImageEl.setAttribute('src',"")
+            previewImageEl.setAttribute('src', "")
         }
     })
+
 
     function download(text, name, type) {
         var a = document.getElementById("a");
@@ -207,9 +277,8 @@ function loadUsers() {
     // creating patient card based on the event
     function createPatientCard({ name, id }) {
         patientCardEl.innerHTML = `
-  <h3> ${name}</h3>
-  <p>${id}</p>
-  `
+          <h3> ${name}</h3>
+          <p>${id}</p>`
 
     }
 

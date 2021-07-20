@@ -127,10 +127,10 @@ body {
     background-color: #eee;
     box-shadow: 4px 5px 3px grey;
     margin: 3rem 0 2rem 1rem;
-    display: flex;
+/*    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 
 .side-section{
@@ -143,8 +143,11 @@ body {
 .side-list button{
     width:120px;
 }
+.image-container-section{
+    display:flex;
+}
 .image-preview {
-    display:none;
+/*    display: none;*/
     width: 200px;
     height: 180px;
     background-color: #9e9e9e;
@@ -166,7 +169,7 @@ body {
     margin: 5px 10px;
 }
 .preview-image{
-    display:none;
+/*    display:none;*/
     width:100%;
     height:100%;
 }
