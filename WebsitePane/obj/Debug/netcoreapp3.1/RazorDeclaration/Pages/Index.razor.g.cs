@@ -84,7 +84,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 106 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
+#line 108 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
  
     public class Patient
     {

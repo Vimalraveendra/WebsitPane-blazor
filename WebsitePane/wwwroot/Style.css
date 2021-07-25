@@ -33,9 +33,6 @@ body {
 
 
 
-.done {
-    display: block;
-}
 
 /* body section */
 
@@ -159,16 +156,19 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0px 10px;
+    position: relative;
 }
 #img-date{
     margin-bottom:0;
 }
 
 .img-container {
-
     height: 140px;
     background-color: aqua;
-    margin: 5px 10px;
+    margin: 5px 8px;
+    position: absolute;
+    top: 11em;
+    z-index: 996;
 }
 .preview-image{
 /*    display:none;*/
@@ -179,6 +179,23 @@ body {
     height: 75px;
     border: 1px solid #000;
     margin: 10px 5px 0 0;
+}
+.caret-list {
+    display:none;
+    padding: 0;
+    margin: 0;
+   
+    background-color: #f4f1f1;
+    position: relative;
+    left: 6em;
+    z-index: 997;
+    width: 100px;
+    box-shadow: 1px 3px 8px;
+}
+
+
+.done {
+    display: block;
 }
 /* media queries on small screens */
 @media only screen and (max-width: 690px) {
