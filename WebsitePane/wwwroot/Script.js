@@ -61,6 +61,9 @@ function loadUsers() {
     //    }
     //})
 
+    function doSomething() {
+        console.log("hello")
+    }
 
     function createImageContainer(file) {
         console.log("iiidi", file)
@@ -83,6 +86,7 @@ function loadUsers() {
 
     }
 
+   
     const arrayList = [];
 
 
@@ -113,16 +117,37 @@ function loadUsers() {
                  
                     let imagePreviewContainerEl = document.createElement('div');
                     imagePreviewContainerEl.classList.add("image-preview")
-
-                    imagePreviewContainerEl.innerHTML = `
-               <div class="date-container">
+                    let imageDateContainerEl = document.createElement('div')
+                    imageDateContainerEl.classList.add("date-container")
+                   
+                    imageDateContainerEl.innerHTML = `
                 <p id="img-date">${new Date().toLocaleDateString().replace(/[/]+/gi, "-")} </p>
-                <span><i class="fas fa-caret-down"></i></span>
-              </div>
-              <div class="img-container">
-                <img src="${e.target.result}" alt="image-preview" class="preview-image" />
-               </div>`
-                    
+                <span ><i class="fas fa-caret-down"></i></span>              
+`
+                    let ulEl = document.createElement('ul');
+                    ulEl.classList.add('caret-list')
+                    ulEl.innerHTML =`
+                    <li>Photo</li>
+                    <li>Delete</li>
+                    <li>cancel</li>`
+                    imageDateContainerEl.addEventListener('click', function () {
+                        ulEl.classList.toggle('done')
+                    })
+
+                    let ulListEl = document.querySelectorAll('.caret-list li')
+                    console.log('asdkd', ulListEl)
+                    ulListEl.forEach(list => {
+                        list.addEventListener('click', function (e) {
+                            console.log("event", e.target)
+                        })
+
+                    })
+                    let imageContainerEl = document.createElement('div')
+                    imageContainerEl.classList.add("img-container")
+                    imageContainerEl.innerHTML = `<img src="${e.target.result}" alt="image-preview" class="preview-image" />`
+                    imagePreviewContainerEl.appendChild(imageDateContainerEl)
+                    imagePreviewContainerEl.appendChild(ulEl)
+                    imagePreviewContainerEl.appendChild(imageContainerEl)
 
                     imageContainerSectionEl.insertBefore(imagePreviewContainerEl, null)
 
