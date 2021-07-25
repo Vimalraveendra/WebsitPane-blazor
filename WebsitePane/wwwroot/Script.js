@@ -128,20 +128,14 @@ function loadUsers() {
                     ulEl.classList.add('caret-list')
                     ulEl.innerHTML =`
                     <li>Photo</li>
-                    <li>Delete</li>
+                        <li>Delete</li>
                     <li>cancel</li>`
                     imageDateContainerEl.addEventListener('click', function () {
                         ulEl.classList.toggle('done')
+                        imagePreviewContainerEl.remove();
                     })
 
-                    let ulListEl = document.querySelectorAll('.caret-list li')
-                    console.log('asdkd', ulListEl)
-                    ulListEl.forEach(list => {
-                        list.addEventListener('click', function (e) {
-                            console.log("event", e.target)
-                        })
-
-                    })
+                   
                     let imageContainerEl = document.createElement('div')
                     imageContainerEl.classList.add("img-container")
                     imageContainerEl.innerHTML = `<img src="${e.target.result}" alt="image-preview" class="preview-image" />`
