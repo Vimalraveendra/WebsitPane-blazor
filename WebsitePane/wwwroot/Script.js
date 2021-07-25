@@ -16,20 +16,20 @@ function loadUsers() {
     const patientContainerEl = document.querySelector('.patient-container')
     const cardContainerEl = document.querySelector('.card-container')
     const patientCardEl = document.querySelector('.patient-card')
-    
-   
+
+
     //const imagePreviewContainerEl = document.getElementById('image-preview');
-   
+
     const sideListBtnEl = document.querySelector('.side-btn')
     const inputGetFileEl = document.getElementById('getFile')
     //const imageContainerEl = document.querySelector('.img-container')
     //const previewImageEl = imageContainerEl.querySelector('.preview-image')
     //const imageDateEl = document.getElementById('img-date')
 
-    const sideListBtn2El = document.querySelector('.side-btn2')
-    const inputGetFilesEl = document.getElementById('getFiles')
-    const imageContainerSectionEl = document.querySelector('.image-container-section')
-   
+    const sideListBtn2El = document.querySelector('.side-btn2');
+    const inputGetFilesEl = document.getElementById('getFiles');
+    const imageContainerSectionEl = document.querySelector('.image-container-section');
+
 
 
     //sideListBtnEl.addEventListener('click', function () {
@@ -39,7 +39,7 @@ function loadUsers() {
     //    //selecting first file in the array
 
     //    const file = this.files[0];
-    
+
     //    //if we seletected the file, we need to create a new file reader as data url
     //    if (file) {
     //        const reader = new FileReader();
@@ -50,7 +50,7 @@ function loadUsers() {
     //            //this.result is the default propery of reader that contains the data url
     //            previewImageEl.setAttribute('src', this.result)
     //                imageDateEl.innerHTML = new Date().toLocaleDateString().replace(/[/]+/gi, "-")
-       
+
     //        })
     //        reader.readAsDataURL(file)
     //    } else {
@@ -63,10 +63,10 @@ function loadUsers() {
 
 
     function createImageContainer(file) {
-        console.log("iiidi",file)
-        imageContainerSectionEl.innerHTML = '';
-        imageContainerSectionEl.innerHTML = `
-        <div class="image-preview" id="image-preview">
+        console.log("iiidi", file)
+
+        imageContainerSectionEl.innerHTML += `
+        <div class="image-preview" >
 
             <div class="date-container">
                 <p id="img-date">HelloS </p>
@@ -79,60 +79,137 @@ function loadUsers() {
         </div>
 `
 
-       
+
 
     }
 
     const arrayList = [];
 
+
     sideListBtn2El.addEventListener('click', function () {
         inputGetFilesEl.click();
     })
-    inputGetFilesEl.addEventListener('change', function () {
+    inputGetFilesEl.addEventListener('change', function (e) {
         //selecting first file in the array
+  
+        //arrayList.push(this.files)
+        //console.log('filess', arrayList)
+        ////console.log('sddrerr',this.files)
 
-        arrayList.push(this.files)
-        console.log('filess', arrayList)
-        //if we seletected the file, we need to create a new file reader as data url
-        if (arrayList.length > 0) {
-            arrayList.forEach((file,index) => {
-                const reader = new FileReader();
-                //previewImageEl.style.display = 'block'
-                createImageContainer(file)
-                   const imageContainerEl = document.querySelector('.img-container')
-                  const previewImageEl = imageContainerEl.querySelector('.preview-image')
-                   const imageDateEl = document.getElementById('img-date')
-                reader.addEventListener('load', function () {
-                    //imagePreviewContainerEl.style.display = "block"
-                    //this.result is the default propery of reader that contains the data url
-                    previewImageEl.setAttribute('src', this.result)
-                    console.log("thisoao",this.result)
-                    imageDateEl.innerHTML = new Date().toLocaleDateString().replace(/[/]+/gi, "-")
+        let files = e.target.files; // FileList object
 
-                })
-                console.log('filesss', file)
-                console.log('index', index)
-                reader.readAsDataURL(file[index])
-            })
+        //Loop through the FileList and render image files as thumbnails.
         
-      
-       
-           
-        } else {
-            imagePreviewContainerEl.style.display = null;
-            previewImageEl.style.display = null;
+        for (var i = 0, f; f = files[i]; i++) {
 
-            previewImageEl.setAttribute('src', "")
+
+
+            let reader = new FileReader();
+
+            // Closure to capture the file information.
+            reader.onload = (function (theFile) {
+                return function (e) {
+                    // Render thumbnail.
+                 
+                    let imagePreviewContainerEl = document.createElement('div');
+                    imagePreviewContainerEl.classList.add("image-preview")
+
+                    imagePreviewContainerEl.innerHTML = `
+               <div class="date-container">
+                <p id="img-date">${new Date().toLocaleDateString().replace(/[/]+/gi, "-")} </p>
+                <span><i class="fas fa-caret-down"></i></span>
+              </div>
+              <div class="img-container">
+                <img src="${e.target.result}" alt="image-preview" class="preview-image" />
+               </div>`
+                    
+
+                    imageContainerSectionEl.insertBefore(imagePreviewContainerEl, null)
+
+                }
+
+            })(f);
+
+
+            // Read in the image file as a data URL.
+            reader.readAsDataURL(f);
         }
+
+        //imageContainerSectionEl.innerHTML = '';
+
+
+        //if (arrayList.length > 0) {
+        //    const reader = new FileReader();
+        //    arrayList.forEach(file => {
+
+
+        //        //previewImageEl.style.display = 'block'
+
+
+        //        reader.addEventListener('load', function () {
+        //            createImageContainer(file)
+        //            const imageContainerEl = document.querySelector('.img-container')
+        //            const previewImageEl = imageContainerEl.querySelector('.preview-image')
+        //            const imageDateEl = document.getElementById('img-date')
+
+        //            //imagePreviewContainerEl.style.display = "block"
+        //            //this.result is the default propery of reader that contains the data url
+
+        //            previewImageEl.setAttribute('src', this.result)
+        //            console.log('reader', reader)
+        //            //console.log("thisoao",this.result)
+        //            imageDateEl.innerHTML = new Date().toLocaleDateString().replace(/[/]+/gi, "-")
+
+        //        })
+        //        console.log('filesss', file)
+
+        //        reader.readAsDataURL(file[0])
+        //    })
+
+
+
+
+        //} else {
+        //    //imagePreviewContainerEl.style.display = null;
+        //    //previewImageEl.style.display = null;
+
+        //    //previewImageEl.setAttribute('src', "")
+        //}
     })
 
+        
+    function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
 
-    function download(text, name, type) {
-        var a = document.getElementById("a");
-        var file = new Blob([text], { type: type });
-        a.href = URL.createObjectURL(file);
-        a.download = name;
-    }   
+        // Loop through the FileList and render image files as thumbnails.
+        for (var i = 0, f; f = files[i]; i++) {
+
+            // Only process image files.
+            if (!f.type.match('image.*')) {
+                continue;
+            }
+
+            var reader = new FileReader();  
+
+            // Closure to capture the file information.
+            reader.onload = (function (theFile) {
+                return function (e) {
+                    // Render thumbnail.
+                    var span = document.createElement('span');
+                    span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                        '" title="', escape(theFile.name), '"/>'].join('');
+                    document.getElementById('list').insertBefore(span, null);
+                };
+            })(f);
+        
+
+            // Read in the image file as a data URL.
+            reader.readAsDataURL(f);
+        }
+    }
+
+    document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
 
     //const usersData = [
     //    {
