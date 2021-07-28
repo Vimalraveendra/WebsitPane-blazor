@@ -55,13 +55,6 @@ using Microsoft.AspNetCore.Components.Web;
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 8 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/_Imports.razor"
 using WebsitePane;
 
@@ -75,6 +68,13 @@ using WebsitePane.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Counter.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -84,9 +84,17 @@ using WebsitePane.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Counter.razor"
+#line 11 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Counter.razor"
        
     private int currentCount = 0;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("loadPatient", "Text after render");
+        }
+    }
 
     private void IncrementCount()
     {
@@ -96,6 +104,7 @@ using WebsitePane.Shared;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JSRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

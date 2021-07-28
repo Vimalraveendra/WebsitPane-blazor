@@ -29,8 +29,22 @@ function loadUsers() {
     const sideListBtn2El = document.querySelector('.side-btn2');
     const inputGetFilesEl = document.getElementById('getFiles');
     const imageContainerSectionEl = document.querySelector('.image-container-section');
+    const ListContainerEl = document.querySelector('.render-side')
 
 
+    const currentLocation = location.href;
+    console.log('currrent', currentLocation)
+    const navItems = document.querySelectorAll('.top-row a');
+    console.log('dada', navItems)
+    for (let i = 0; i < navItems.length; i++) {
+        const currentLocation = location.href;
+        console.log('currrent', currentLocation)
+        if (navItems[i].href === currentLocation) {
+            navItems[i].className = 'active';
+        }
+
+            
+    }
 
     //sideListBtnEl.addEventListener('click', function () {
     //    inputGetFileEl.click();
@@ -61,6 +75,22 @@ function loadUsers() {
     //    }
     //})
 
+    function createListItems(list) {
+        let liEl = document.createElement('li')
+        liText = document.createTextNode(list)
+        liEl.appendChild(liText)
+        ListContainerEl.appendChild(liEl)
+    }
+
+    window.showListItems=()=> {
+        console.log('hello', ListContainerEl)
+        ListContainerEl.innerHTML = "";
+        ListContainerEl.classList.toggle('done')
+        let result = DotNet.invokeMethodAsync("WebsitePane", 'GetList')
+        result.then(data=>data.forEach(list=>createListItems(list)))
+       
+    }
+        
     function doSomething() {
         console.log("hello")
     }

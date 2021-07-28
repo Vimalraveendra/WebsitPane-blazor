@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{ECB8488E-ED32-46CC-B5D7-C3D47AF00383}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/Shared/MainLayout.razor">
     <Files>
       <File FileName="WebsitePane/Shared/MainLayout.razor" Line="17" Column="14" />
       <File FileName="WebsitePane/Pages/Index.razor" />
@@ -8,7 +8,9 @@
       <File FileName="WebsitePane/wwwroot/css/site.css" />
       <File FileName="WebsitePane/wwwroot/Script.js" />
       <File FileName="WebsitePane/Shared/NavMenu.razor" />
-      <File FileName="WebsitePane/Program.cs" Line="17" Column="10" />
+      <File FileName="WebsitePane/Program.cs" />
+      <File FileName="WebsitePane/Pages/Counter.razor" />
+      <File FileName="WebsitePane/wwwroot/counterScript.js" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,11 +18,10 @@
           <Node name="WebsitePane" expanded="True">
             <Node name="WebsitePane" expanded="True">
               <Node name="Pages" expanded="True" />
-              <Node name="Shared" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
+              <Node name="Shared" expanded="True">
+                <Node name="MainLayout.razor" selected="True" />
               </Node>
-              <Node name="Program.cs" selected="True" />
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>

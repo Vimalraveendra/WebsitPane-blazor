@@ -84,8 +84,9 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 108 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
+#line 114 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
  
+    static string[] list = new String[] { "Hello", "How", "Are", "You" };
     public class Patient
     {
         public int Id { get; set; }
@@ -144,8 +145,20 @@ using Microsoft.JSInterop;
     [JSInvokable]
     public static Task<List<Patient>> GetPatientsList()
     {
-        
+
         return Task.FromResult(patientList);
+    }
+
+    [JSInvokable]
+    public static Task<string []> GetList()
+    {
+
+        return Task.FromResult(list);
+    }
+    public async void HandleList()
+    {
+        await JSRuntime.InvokeVoidAsync("showListItems");
+        StateHasChanged();
     }
 
 #line default

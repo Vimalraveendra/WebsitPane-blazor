@@ -22,13 +22,18 @@ body {
 }
 
 .navbar {
-    
-    padding: 1.2rem !important ;
+/*    width:100%;
+    padding: 1.2rem !important ;*/
+    padding:0px;
 }
     ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+.navbar a {
+    margin: 0px 5px;
+    color: #fff;
 }
 
 
@@ -136,6 +141,7 @@ body {
 }
 .side-section{
     background-color:aqua;
+    position:relative;
 }
 .side-list button{
     width:120px;
@@ -191,6 +197,20 @@ body {
     z-index: 997;
     width: 100px;
     box-shadow: 1px 3px 8px;
+}
+
+.render-side {
+    display:none;
+    background-color: #fff;
+    position: absolute;
+    width: 180px;
+    border: 1px solid black;
+    right: 10px;
+    top: 9em;
+    box-shadow: 1px 2px 5px;
+}
+.render-side li{
+    padding-left:4px;
 }
 
 
