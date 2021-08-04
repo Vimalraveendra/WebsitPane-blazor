@@ -16,6 +16,7 @@ function loadUsers() {
     const patientContainerEl = document.querySelector('.patient-container')
     const cardContainerEl = document.querySelector('.card-container')
     const patientCardEl = document.querySelector('.patient-card')
+    const bodyEl = document.getElementsByTagName("BODY")[0];
 
 
     //const imagePreviewContainerEl = document.getElementById('image-preview');
@@ -94,6 +95,12 @@ function loadUsers() {
         result.then(data => data.forEach(list => createListItems(list, ListContainerEl)))
            
     }
+    //window.HandleEvents = () => {
+    //    bodyEl.style.pointerEvents="none"
+        
+
+    //}
+
         
     function doSomething() {
         console.log("hello")

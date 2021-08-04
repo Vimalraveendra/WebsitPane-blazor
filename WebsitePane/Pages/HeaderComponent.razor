@@ -1,0 +1,32 @@
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed">
+    <div class="nav-top-list">
+        <div>
+            <a href="">Home</a>
+            <a href="counter">About</a>
+            <a href="FetchData">About</a>
+        </div>
+        <button @onclick="HandleNotes">Add Notes</button>
+    </div>
+
+</nav>
+@if (showNote)
+{
+    <div class="notes">
+        <h4>Hello</h4>
+    </div>
+}
+
+@code {
+
+    public bool showNote { get; set; }
+
+    public async void HandleNotes()
+    {
+        showNote = !showNote;
+        await JSRuntime.InvokeVoidAsync("HandleEvents");
+    }
+
+}
