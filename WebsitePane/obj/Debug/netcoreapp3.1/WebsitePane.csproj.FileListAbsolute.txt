@@ -48,3 +48,5 @@
 /Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/WebsitePane.pdb
 /Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/WebsitePane.genruntimeconfig.cache
 /Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/WebsitePane.csproj.CopyComplete
+/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/SideBar.razor.g.cs
+/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/Razor/Pages/SideBar.razor.g.cs

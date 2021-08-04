@@ -1,16 +1,14 @@
 ﻿<Properties StartupConfiguration="{ECB8488E-ED32-46CC-B5D7-C3D47AF00383}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/Shared/MainLayout.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/wwwroot/Script.js">
     <Files>
-      <File FileName="WebsitePane/Shared/MainLayout.razor" Line="17" Column="14" />
+      <File FileName="WebsitePane/Shared/MainLayout.razor" Line="22" Column="11" IsPinned="True" />
       <File FileName="WebsitePane/Pages/Index.razor" />
       <File FileName="WebsitePane/Pages/_Host.cshtml" />
-      <File FileName="WebsitePane/wwwroot/Style.css" />
-      <File FileName="WebsitePane/wwwroot/css/site.css" />
-      <File FileName="WebsitePane/wwwroot/Script.js" />
-      <File FileName="WebsitePane/Shared/NavMenu.razor" />
-      <File FileName="WebsitePane/Program.cs" />
       <File FileName="WebsitePane/Pages/Counter.razor" />
+      <File FileName="WebsitePane/wwwroot/Script.js" Line="88" Column="6" />
       <File FileName="WebsitePane/wwwroot/counterScript.js" />
+      <File FileName="WebsitePane/Pages/SideBar.razor" />
+      <File FileName="WebsitePane/wwwroot/Style.css" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,10 +16,11 @@
           <Node name="WebsitePane" expanded="True">
             <Node name="WebsitePane" expanded="True">
               <Node name="Pages" expanded="True" />
-              <Node name="Shared" expanded="True">
-                <Node name="MainLayout.razor" selected="True" />
+              <Node name="Shared" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="Script.js" selected="True" />
               </Node>
-              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>

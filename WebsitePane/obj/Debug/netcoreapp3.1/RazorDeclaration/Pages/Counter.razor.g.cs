@@ -84,7 +84,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Counter.razor"
+#line 12 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Counter.razor"
        
     private int currentCount = 0;
     protected override async Task OnAfterRenderAsync(bool firstRender)

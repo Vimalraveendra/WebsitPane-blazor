@@ -75,20 +75,24 @@ function loadUsers() {
     //    }
     //})
 
-    function createListItems(list) {
+    function createListItems(list,ListContainerEl) {
+        
+       
         let liEl = document.createElement('li')
         liText = document.createTextNode(list)
         liEl.appendChild(liText)
         ListContainerEl.appendChild(liEl)
+        
     }
 
     window.showListItems=()=> {
-        console.log('hello', ListContainerEl)
+        const ListContainerEl = document.querySelector('.render-side')
+        console.log('list', ListContainerEl)
         ListContainerEl.innerHTML = "";
-        ListContainerEl.classList.toggle('done')
+        //ListContainerEl.classList.toggle('done')
         let result = DotNet.invokeMethodAsync("WebsitePane", 'GetList')
-        result.then(data=>data.forEach(list=>createListItems(list)))
-       
+        result.then(data => data.forEach(list => createListItems(list, ListContainerEl)))
+           
     }
         
     function doSomething() {
