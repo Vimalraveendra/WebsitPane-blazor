@@ -7,6 +7,7 @@
 
 </nav>*@
 
+
 <!-- body section -->
 <main class="main-section">
     <section class="main-container">
@@ -81,32 +82,8 @@
    
 
     </section>
-    <section class="side-section">
-        <ul class="side-list">
-            <li>
-                <button class="side-btn">Open</button>
-                <input type='file' id="getFile" style="display:none">
-            </li>
-            <li><a>How</a></li>
-            <li><a>Here</a></li>
-        </ul>
-        <ul class="side-list">
-            <li><a>Hello</a></li>
-            <li @onclick="HandleList"><button>Hello</button></li>
-            <li>
-                <button class="side-btn2">OpenMutiple</button>
-                <input type='file' id="getFiles" multiple style="display:none">
-            </li>
-        </ul>
-        <input type="file" id="files" name="files[]" multiple />
-        <ul class="render-side">
-            @*<li>Hello</li>
-            <li>How</li>
-            <li>Are</li>
-            <li>You</li>*@
-        </ul>
-
-    </section>
+    <SideBar></SideBar>
+   
 </main>
 
 @code
@@ -181,9 +158,9 @@
 
         return Task.FromResult(list);
     }
-    public async void HandleList()
+    @*public async void HandleList()
     {
         await JSRuntime.InvokeVoidAsync("showListItems");
         StateHasChanged();
-    }
+    }*@
 }

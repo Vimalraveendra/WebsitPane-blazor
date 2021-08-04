@@ -204,7 +204,7 @@ body {
 }
 
 .render-side {
-    display:none;
+/*    display:none;*/
     background-color: #fff;
     position: absolute;
     width: 180px;

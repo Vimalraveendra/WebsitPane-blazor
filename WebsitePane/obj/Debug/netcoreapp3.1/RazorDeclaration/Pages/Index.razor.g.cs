@@ -84,7 +84,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 114 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
+#line 91 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/Index.razor"
  
     static string[] list = new String[] { "Hello", "How", "Are", "You" };
     public class Patient
@@ -155,11 +155,7 @@ using Microsoft.JSInterop;
 
         return Task.FromResult(list);
     }
-    public async void HandleList()
-    {
-        await JSRuntime.InvokeVoidAsync("showListItems");
-        StateHasChanged();
-    }
+    
 
 #line default
 #line hidden
