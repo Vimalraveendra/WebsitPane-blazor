@@ -40,7 +40,22 @@ body {
     color: #fff;
 }
 
+.nav-top-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.notes {
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    background-color: aqua;
+    box-shadow: 1px 3px 8px;
+    top: 8em;
+    left: 12em;
+    pointer-events:auto;
+}
 
 
 /* body section */
