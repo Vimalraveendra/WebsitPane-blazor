@@ -12,20 +12,19 @@
     </div>
 
 </nav>
-@if (showNote)
-{
+
     <div class="notes">
         <h4>Hello</h4>
     </div>
-}
+
 
 @code {
 
-    public bool showNote { get; set; }
+    @*public bool showNote { get; set; }*@
 
     public async void HandleNotes()
     {
-        showNote = !showNote;
+        @*showNote = !showNote;*@
         await JSRuntime.InvokeVoidAsync("HandleEvents");
     }
 

@@ -19,8 +19,7 @@
         </li>
     </ul>
     <input type="file" id="files" name="files[]" multiple />
-    @if (showList)
-    {
+ 
 
         <ul class="render-side">
             @*<li>Hello</li>
@@ -28,7 +27,7 @@
                 <li>Are</li>
                 <li>You</li>*@
         </ul>
-    }
+    
 
 
 </section>
@@ -37,16 +36,14 @@
 
 @code {
 
-    public bool showList { get; set; }
+    @*public bool showList { get; set; }*@
     public async void HandleList()
     {
-        showList = !showList;
-        if(showList ==  true)
-        {
-            await Task.Delay(100);
+        @*showList = !showList;
+            await Task.Delay(100);*@
             await JSRuntime.InvokeVoidAsync("showListItems");
             StateHasChanged();
-        }
+        
 
     }
 

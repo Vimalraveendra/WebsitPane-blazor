@@ -83,19 +83,21 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/SideBar.razor"
-       
-
-    public bool showList { get; set; }
+#line 39 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/SideBar.razor"
+                                          
     public async void HandleList()
     {
-        showList = !showList;
-        if(showList ==  true)
-        {
-            await Task.Delay(100);
+        
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 43 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/SideBar.razor"
+                                    
             await JSRuntime.InvokeVoidAsync("showListItems");
             StateHasChanged();
-        }
+        
 
     }
 

@@ -88,18 +88,28 @@ function loadUsers() {
 
     window.showListItems=()=> {
         const ListContainerEl = document.querySelector('.render-side')
-        console.log('list', ListContainerEl)
         ListContainerEl.innerHTML = "";
-        //ListContainerEl.classList.toggle('done')
-        let result = DotNet.invokeMethodAsync("WebsitePane", 'GetList')
-        result.then(data => data.forEach(list => createListItems(list, ListContainerEl)))
+        ListContainerEl.classList.toggle('done')
+        if (ListContainerEl.classList.contains('done')) {
+            let result = DotNet.invokeMethodAsync("WebsitePane", 'GetList')
+            result.then(data => data.forEach(list => createListItems(list, ListContainerEl)))
+        }
+        
            
     }
-    //window.HandleEvents = () => {
-    //    bodyEl.style.pointerEvents="none"
+    window.HandleEvents = () => {
+        const notesContainerEl = document.querySelector('.notes')
+        notesContainerEl.classList.toggle('done')
+        if (notesContainerEl.classList.contains('done')) {
+            //bodyEl.style.pointerEvents = "none"
+        } else {
+            bodyEl.style.pointerEvents = "auto  "
+        }
+
+        
         
 
-    //}
+    }
 
         
     function doSomething() {

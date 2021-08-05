@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{ECB8488E-ED32-46CC-B5D7-C3D47AF00383}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/Pages/Index.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebsitePane/Pages/HeaderComponent.razor">
     <Files>
       <File FileName="WebsitePane/Shared/MainLayout.razor" Line="16" Column="9" IsPinned="True" />
-      <File FileName="WebsitePane/Pages/Index.razor" Line="9" Column="1" />
+      <File FileName="WebsitePane/Pages/Index.razor" />
       <File FileName="WebsitePane/Pages/_Host.cshtml" />
-      <File FileName="WebsitePane/Pages/Counter.razor" Line="5" Column="36" />
-      <File FileName="WebsitePane/wwwroot/Script.js" Line="88" Column="6" />
-      <File FileName="WebsitePane/wwwroot/counterScript.js" Line="1" Column="1" />
+      <File FileName="WebsitePane/Pages/Counter.razor" />
+      <File FileName="WebsitePane/wwwroot/Script.js" />
+      <File FileName="WebsitePane/wwwroot/counterScript.js" />
       <File FileName="WebsitePane/Pages/SideBar.razor" />
-      <File FileName="WebsitePane/wwwroot/Style.css" Line="59" Column="1" />
-      <File FileName="WebsitePane/Pages/HeaderComponent.razor" Line="17" Column="16" />
-      <File FileName="WebsitePane/Pages/MainComponent.razor" Line="1" Column="1" />
+      <File FileName="WebsitePane/wwwroot/Style.css" />
+      <File FileName="WebsitePane/Pages/HeaderComponent.razor" Line="26" Column="36" />
+      <File FileName="WebsitePane/Pages/MainComponent.razor" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +18,7 @@
           <Node name="WebsitePane" expanded="True">
             <Node name="WebsitePane" expanded="True">
               <Node name="Pages" expanded="True">
-                <Node name="Index.razor" selected="True" />
+                <Node name="HeaderComponent.razor" selected="True" />
               </Node>
               <Node name="Shared" expanded="True" />
               <Node name="wwwroot" expanded="True">
