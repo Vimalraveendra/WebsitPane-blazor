@@ -57,7 +57,12 @@ body {
     left: 12em;
     pointer-events:auto;
 }
-
+.notes-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 5px;
+}
 
 /* body section */
 

@@ -101,7 +101,7 @@ function loadUsers() {
         const notesContainerEl = document.querySelector('.notes')
         notesContainerEl.classList.toggle('done')
         if (notesContainerEl.classList.contains('done')) {
-            //bodyEl.style.pointerEvents = "none"
+            bodyEl.style.pointerEvents = "none"
         } else {
             bodyEl.style.pointerEvents = "auto  "
         }
