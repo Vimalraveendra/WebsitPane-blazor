@@ -47,6 +47,7 @@ body {
 }
 
 .notes {
+    display:none;
     position: absolute;
     width: 500px;
     height: 350px;
@@ -219,7 +220,7 @@ body {
 }
 
 .render-side {
-/*    display:none;*/
+    display:none;
     background-color: #fff;
     position: absolute;
     width: 180px;

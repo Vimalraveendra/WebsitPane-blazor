@@ -83,14 +83,19 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/HeaderComponent.razor"
-       
-
-    public bool showNote { get; set; }
+#line 23 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/HeaderComponent.razor"
+                                          
 
     public async void HandleNotes()
     {
-        showNote = !showNote;
+        
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 27 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/HeaderComponent.razor"
+                                 
         await JSRuntime.InvokeVoidAsync("HandleEvents");
     }
 
