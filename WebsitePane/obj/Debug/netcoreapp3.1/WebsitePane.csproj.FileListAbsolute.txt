@@ -54,3 +54,5 @@
 /Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/Razor/Pages/HeaderComponent.razor.g.cs
 /Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MainComponent.razor.g.cs
 /Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/Razor/Pages/MainComponent.razor.g.cs
+/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/NotesContainer.razor.g.cs
+/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/obj/Debug/netcoreapp3.1/Razor/Pages/NotesContainer.razor.g.cs

@@ -55,6 +55,13 @@ using Microsoft.AspNetCore.Components.Web;
 #line hidden
 #nullable disable
 #nullable restore
+#line 7 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/_Imports.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 8 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/_Imports.razor"
 using WebsitePane;
 
@@ -68,14 +75,7 @@ using WebsitePane.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/HeaderComponent.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-    public partial class HeaderComponent : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class NotesContainer : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -83,29 +83,22 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/HeaderComponent.razor"
+#line 12 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/NotesContainer.razor"
        
+   
+    public bool Modal { get; set; }
+    [Parameter]
+    public EventCallback<bool> myCustomEvent { get; set; }
 
- 
-
-    public async void HandleNotes()
+    public async void HandleNotesContainer()
     {
-        
+        await myCustomEvent.InvokeAsync(Modal);
 
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 31 "/Users/vimalraveendran/Desktop/blazor/WebsitePane/WebsitePane/Pages/HeaderComponent.razor"
-                                 
-        await JSRuntime.InvokeVoidAsync("HandleEvents");
     }
 
-
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JSRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

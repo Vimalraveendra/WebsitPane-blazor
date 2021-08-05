@@ -12,15 +12,19 @@
     </div>
 
 </nav>
-
-    <div class="notes">
+<NotesContainer myCustomEvent="@HandleNotes"></NotesContainer>
+    @*<div class="notes">
+        <div class="notes-group">
+            <p>Notes container</p>
+            <button @onclick="HandleNotes">close</button>
+        </div>
         <h4>Hello</h4>
-    </div>
+    </div>*@
 
 
 @code {
 
-    @*public bool showNote { get; set; }*@
+ 
 
     public async void HandleNotes()
     {

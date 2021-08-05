@@ -1,0 +1,23 @@
+﻿
+
+
+<div class="notes">
+    <div class="notes-group">
+        <p>Notes container</p>
+        <button @onclick="HandleNotesContainer">close</button>
+    </div>
+    <h4>Hello</h4>
+</div>
+
+@code {
+   
+    public bool Modal { get; set; }
+    [Parameter]
+    public EventCallback<bool> myCustomEvent { get; set; }
+
+    public async void HandleNotesContainer()
+    {
+        await myCustomEvent.InvokeAsync(Modal);
+
+    }
+}
