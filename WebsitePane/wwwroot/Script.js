@@ -31,6 +31,26 @@ function loadUsers() {
     const inputGetFilesEl = document.getElementById('getFiles');
     const imageContainerSectionEl = document.querySelector('.image-container-section');
     const ListContainerEl = document.querySelector('.render-side')
+    const mainNavContainerEl = document.querySelectorAll('.first a')
+    const topListContainerEl = document.querySelectorAll('.top-list a')
+  
+
+    for (let i = 0; i < mainNavContainerEl.length; i++) {
+        mainNavContainerEl[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("nav-active");
+            console.log("current",current)
+            current[0].className = current[0].className.replace("nav-active", "");
+            this.className += "nav-active";
+        });
+    }
+    for (let i = 0; i < topListContainerEl.length; i++) {
+        topListContainerEl[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("nav-active");
+            console.log("current", current)
+            current[0].className = current[0].className.replace("nav-active", "");
+            this.className += "nav-active";
+        });
+    }
 
 
     const currentLocation = location.href;
